@@ -1,0 +1,491 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  color: #444;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  color: #e52e71;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("../homehero.jpeg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: rgb(250, 227, 23);
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #d11a56;
+}
+
+/* Highlight Section */
+.highlight-section {
+  background: #fff7ed;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.highlight-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ff6f00;
+}
+
+.highlight-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.highlight-card {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-card img {
+  width: 230px;
+  margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+  color: #e52e71;
+  margin-bottom: 0.5rem;
+}
+
+/* Categories */
+.categories {
+  background: #f4f9ff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #3366cc;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.category-card {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.category-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.category-card a {
+  text-decoration: none;
+  background: #3366cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.category-card a:hover {
+  background: #274bb5;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 4rem 1rem;
+  background: #fff0f6;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #d63384;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Reviews */
+.reviews {
+  background: #e8f4ea;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 2.2rem;
+  color: #43a047;
+  margin-bottom: 2rem;
+}
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.review-card {
+  width: 280px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+}
+
+.review-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.review-card span {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #1e1e2f;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer .links a {
+  color: #fff;
+  margin: 0 0.6rem;
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  text-decoration: underline;
+}
+
+/* Mission & Values Section */
+.mission-values {
+  background: #fffef3;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.mission-values h2 {
+  font-size: 2.5rem;
+  color: #ff8a00;
+  margin-bottom: 2rem;
+}
+
+.mission-values p {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.values-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.value-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-6px);
+}
+
+.value-item h3 {
+  margin-bottom: 1rem;
+  color: #e52e71;
+  font-size: 1.3rem;
+}
+
+.value-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Button Ripple Effect */
+.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.cta-button,
+.category-card a {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive Home Page CSS */
+
+/* Your existing styles (already provided) go here... */
+
+/* NEW: Responsive Navbar Styles */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-nav {
+  display: none;
+  flex-direction: column;
+  background: #ff8a00;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.dropdown-nav a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  background: #e52e71;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-nav a:hover {
+  background: #c81d5a;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  nav.main-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .highlight-cards,
+  .category-grid,
+  .values-list,
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-card,
+  .category-card,
+  .value-item,
+  .review-card {
+    width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Optional Extra Responsiveness */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}

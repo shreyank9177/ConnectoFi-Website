@@ -1,0 +1,203 @@
+/* allfoods.css – Premium Food Grid Style */
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fffef9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background: linear-gradient(135deg, #e8f5e9, #fff3e0);
+  border-radius: 0 0 30px 30px;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  color: #388e3c;
+  margin-bottom: 0.5rem;
+}
+
+.title-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Product Grid */
+.all-products {
+  padding: 3rem 1rem 4rem;
+  background: #fdfcf7;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: scale(1.04);
+}
+
+/* Image Container */
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f1f8e9;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-image:hover img {
+  transform: scale(1.08);
+}
+
+.big-details {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.96);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.card-image:hover .big-details {
+  opacity: 1;
+}
+
+.price-tag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e64a19;
+  margin-bottom: 0.6rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.checkmark {
+  color: #4caf50;
+  margin-right: 0.5rem;
+}
+
+/* Product Title */
+.product-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 0 0.5rem;
+  color: #444;
+}
+
+/* Buy Button */
+.product-card button {
+  background: linear-gradient(90deg, #66bb6a, #81c784);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #33691e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer .links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  text-decoration: underline;
+}

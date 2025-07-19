@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifting | ConnectoFi</title>
+    <link rel="stylesheet" href="gifting.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">ConnectoFi</div>
+
+      <!-- Hamburger (only on mobile) -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <!-- Navigation -->
+      <nav class="nav-links">
+        <a href="about.html">About Us</a>
+        <a href="index.html">Home</a>
+        <a href="stationary.html">Stationery</a>
+        <a href="food.html">Food</a>
+        <a href="gifting.html" aria-current="page">Gifting</a>
+      </nav>
+
+      <!-- Social Media Dropdown -->
+      <div class="social">
+        <img src="./images/socialmedia.png" width="30" alt="Social" />
+        <div class="dropdown">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">X (Twitter)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner-slider">
+      <img
+        src="../gifting-images/temp_images/banner1.jpg"
+        class="banner-img active"
+        alt="Gift Box Banner"
+      />
+      <img
+        src="../gifting-images/temp_images/banner2.png"
+        class="banner-img"
+        alt="Celebration Banner"
+      />
+      <img
+        src="../gifting-images/temp_images/banner3.jpg"
+        class="banner-img"
+        alt="Festive Gifting Banner"
+      />
+      <div class="banner-progress">
+        <div class="circle"><div class="fill"></div></div>
+        <div class="circle"><div class="fill"></div></div>
+        <div class="circle"><div class="fill"></div></div>
+      </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="popular-products">
+      <h2 class="section-title">Top Gifting Picks</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="../gifting-images/products/giftbox.webp" alt="Gift Set" />
+            <div class="big-details">
+              <div class="price-tag">₹499 Only</div>
+              <ul class="features-list">
+                <li><span class="checkmark">✓</span> Curated Box</li>
+                <li><span class="checkmark">✓</span> Elegant Wrap</li>
+                <li><span class="checkmark">✓</span> Custom Tag</li>
+                <li><span class="checkmark">✓</span> Free Shipping</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-title">
+            <div class="product-name">Luxury Gift Box</div>
+            <button
+              class="buy-button"
+              onclick="window.open('https://www.amazon.com/s?k=gift box')"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="../gifting-images/products/combo.webp" alt="Gift Combo" />
+            <div class="big-details">
+              <div class="price-tag">₹399 Only</div>
+              <ul class="features-list">
+                <li><span class="checkmark">✓</span> 3-in-1 Combo</li>
+                <li><span class="checkmark">✓</span> Themed Pack</li>
+                <li><span class="checkmark">✓</span> Eco-Friendly</li>
+                <li><span class="checkmark">✓</span> Handmade</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-title">
+            <div class="product-name">Themed Gift Combo</div>
+            <button
+              class="buy-button"
+              onclick="window.open('https://www.amazon.com/s?k=gift combo')"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="../gifting-images/products/giftbag.jpg" alt="Gift Bag" />
+            <div class="big-details">
+              <div class="price-tag">₹249 Only</div>
+              <ul class="features-list">
+                <li><span class="checkmark">✓</span> Designer Bag</li>
+                <li><span class="checkmark">✓</span> Reusable</li>
+                <li><span class="checkmark">✓</span> Sturdy Material</li>
+                <li><span class="checkmark">✓</span> Gold Foil Print</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-title">
+            <div class="product-name">Premium Gift Bag</div>
+            <button
+              class="buy-button"
+              onclick="window.open('https://www.amazon.com/s?k=gift bag')"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="../gifting-images/products/mug.jpg" alt="Custom Mug" />
+            <div class="big-details">
+              <div class="price-tag">₹299 Only</div>
+              <ul class="features-list">
+                <li><span class="checkmark">✓</span> Personalized Text</li>
+                <li><span class="checkmark">✓</span> Premium Ceramic</li>
+                <li><span class="checkmark">✓</span> Gift-Boxed</li>
+                <li><span class="checkmark">✓</span> Microwave Safe</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-title">
+            <div class="product-name">Custom Mug Gift</div>
+            <button
+              class="buy-button"
+              onclick="window.open('https://www.amazon.com/s?k=custom mug gift')"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </div>
+        <div class="explore-all-container">
+          <a href="allgifting.html" class="explore-all-button"
+            >Explore All Gifting Products →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift Ranges -->
+    <section class="mind-blowing-ranges">
+      <h2>Gift for Every Occasion</h2>
+      <div class="ranges-cards">
+        <div class="range-card">
+          <img
+            src="../gifting-images/ranges/birthday.png"
+            alt="Birthday Gifts"
+          />
+        </div>
+        <div class="range-card">
+          <img src="../gifting-images/ranges/wedding.png" alt="Wedding Gifts" />
+        </div>
+        <div class="range-card">
+          <img
+            src="../gifting-images/ranges/festive.png"
+            alt="Festival Gifts"
+          />
+        </div>
+        <div class="range-card">
+          <img
+            src="../gifting-images/ranges/corporate.png"
+            alt="Corporate Gifts"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Selling Points -->
+    <section class="likhpad-unique">
+      <h2>Why Choose Our Gifting Range?</h2>
+      <div class="fixed-centered-image">
+        <img
+          src="../gifting-images/cropped-forgift.png"
+          alt="Gifting Highlights"
+        />
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section class="updates">
+      <h2>See the Updates</h2>
+      <div class="update-feed">
+        <div class="post">
+          <p>🎁 Diwali Special Hampers Live Now!</p>
+          <img src="../gifting-images/hampers.png" alt="Diwali Hampers" />
+        </div>
+        <div class="post">
+          <p>🎉 Loved by 1L+ Happy Customers!</p>
+          <img src="../gifting-images/1lack.png" alt="Happy Customers" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Available At -->
+    <section class="available-at">
+      <h2>We are also available at...</h2>
+      <div class="brands">
+        <img src="../stationary-images/logos/googlelogo.jpeg" alt="Google" />
+        <img src="../stationary-images/logos/amazonlogo.jpeg" alt="Amazon" />
+        <img src="../stationary-images/logos/flipkartlogo.png" alt="Flipkart" />
+        <img src="../stationary-images/logos/blinkitlogo.png" alt="Blinkit" />
+        <img src="../stationary-images/logos/zeptologo.png" alt="Zepto" />
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <h2>Reviews and Ratings</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <div class="platform-name">Amazon</div>
+          <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+          <p class="review-text">“Perfect gift pack. Loved the quality!”</p>
+        </div>
+        <div class="review-card">
+          <div class="platform-name">Flipkart</div>
+          <p class="stars">⭐️⭐️⭐️⭐️</p>
+          <p class="review-text">“Beautifully packed and fast delivery.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Under ConnectoFi you can choose how you eat, how you write, and what
+        makes your moments special.
+      </p>
+      <div class="links">
+        <a href="#">About Us</a> | <a href="#">Contact Us</a> |
+        <a href="#">FAQs</a> | <a href="#">Privacy Policy</a> |
+        <a href="#">Terms and Conditions</a>
+      </div>
+    </footer>
+
+    <script src="gifting.js"></script>
+  </body>
+</html>

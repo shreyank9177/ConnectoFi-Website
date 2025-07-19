@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stationery | ConnectoFi</title>
+    <link rel="stylesheet" href="stationary.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">ConnectoFi</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links">
+        <a href="about.html">About Us</a>
+        <a href="index.html">Home</a>
+        <a href="stationary.html" aria-current="page">Stationery</a>
+        <a href="food.html">Food</a>
+        <a href="gifting.html">Gifting</a>
+      </nav>
+      <div class="social">
+        <img src="./images/socialmedia.png" width="30" alt="Social" />
+        <div class="dropdown">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">X (Twitter)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner-slider">
+      <img
+        src="../stationary-images/banner1.jpg"
+        class="banner-img active"
+        alt="Stationery Banner 1"
+      />
+      <img
+        src="../stationary-images/banner2.jpg"
+        class="banner-img"
+        alt="Stationery Banner 2"
+      />
+      <img
+        src="../stationary-images/banner3.jpg"
+        class="banner-img"
+        alt="Stationery Banner 3"
+      />
+      <div class="banner-progress">
+        <div class="circle"><div class="fill"></div></div>
+        <div class="circle"><div class="fill"></div></div>
+        <div class="circle"><div class="fill"></div></div>
+      </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="popular-products">
+      <h2 class="section-title">Top Stationery Picks</h2>
+      <div class="product-grid">
+        <!-- Sample Product -->
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="../stationary-images/products/pen.jpg"
+              alt="Premium Pen"
+            />
+            <div class="big-details">
+              <div class="price-tag">₹99 Only</div>
+              <ul class="features-list">
+                <li><span class="checkmark">✓</span> Smooth Ink</li>
+                <li><span class="checkmark">✓</span> Elegant Design</li>
+                <li><span class="checkmark">✓</span> Long Lasting</li>
+                <li><span class="checkmark">✓</span> Premium Grip</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-title">
+            <div class="product-name">Signature Gel Pen</div>
+            <button
+              class="buy-button"
+              onclick="window.open('https://www.amazon.com/s?k=gel pen')"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </div>
+
+        <!-- Add more stationery products here -->
+
+        <div class="explore-all-container">
+          <a href="allstationary.html" class="explore-all-button"
+            >Explore All Stationery Products →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Occasion Ranges -->
+    <section class="mind-blowing-ranges">
+      <h2>Perfect For Every Desk</h2>
+      <div class="ranges-cards">
+        <div class="range-card">
+          <img
+            src="../stationary-images/ranges/school.png"
+            alt="School Supplies"
+          />
+        </div>
+        <div class="range-card">
+          <img
+            src="../stationary-images/ranges/office.png"
+            alt="Office Essentials"
+          />
+        </div>
+        <div class="range-card">
+          <img src="../stationary-images/ranges/art.png" alt="Art Stationery" />
+        </div>
+        <div class="range-card">
+          <img src="../stationary-images/ranges/gifting.png" alt="Gift Packs" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="likhpad-unique">
+      <h2>Why Our Stationery?</h2>
+      <div class="fixed-centered-image">
+        <img
+          src="../stationary-images/highlights.png"
+          alt="Stationery Highlights"
+        />
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section class="updates">
+      <h2>Latest Updates</h2>
+      <div class="update-feed">
+        <div class="post">
+          <p>🖋 New Art Range Launched!</p>
+          <img src="../stationary-images/newart.png" alt="New Art Range" />
+        </div>
+        <div class="post">
+          <p>📚 Back to School Kits Now Available!</p>
+          <img src="../stationary-images/backtoschool.png" alt="School Kits" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Available At -->
+    <section class="available-at">
+      <h2>We are also available at...</h2>
+      <div class="brands">
+        <img src="../stationary-images/logos/googlelogo.jpeg" alt="Google" />
+        <img src="../stationary-images/logos/amazonlogo.jpeg" alt="Amazon" />
+        <img src="../stationary-images/logos/flipkartlogo.png" alt="Flipkart" />
+        <img src="../stationary-images/logos/blinkitlogo.png" alt="Blinkit" />
+        <img src="../stationary-images/logos/zeptologo.png" alt="Zepto" />
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <h2>Reviews and Ratings</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <div class="platform-name">Amazon</div>
+          <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+          <p class="review-text">“Quality pens, worth every rupee.”</p>
+        </div>
+        <div class="review-card">
+          <div class="platform-name">Flipkart</div>
+          <p class="stars">⭐️⭐️⭐️⭐️</p>
+          <p class="review-text">“Loved the packaging and variety.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Under ConnectoFi you can choose how you eat, how you write, and what
+        makes your moments special.
+      </p>
+      <div class="links">
+        <a href="#">About Us</a> | <a href="#">Contact Us</a> |
+        <a href="#">FAQs</a> | <a href="#">Privacy Policy</a> |
+        <a href="#">Terms and Conditions</a>
+      </div>
+    </footer>
+
+    <script src="stationary.js"></script>
+  </body>
+</html>
