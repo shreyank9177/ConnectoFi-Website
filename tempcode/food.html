@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food | ConnectoFi</title>
-    <link rel="stylesheet" href="food.css" />
+    <title>Stationery | ConnectoFi</title>
+    <link rel="stylesheet" href="./food.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -14,19 +14,28 @@
     <!-- Header -->
     <header>
       <div class="logo">ConnectoFi</div>
-      <nav>
-        <a href="about.html">About Us</a>
-        <a href="index.html">Home</a>
-        <a href="stationary.html">Stationery</a>
-        <a href="food.html" aria-current="page">Food</a>
-        <a href="gifting.html">Gifting</a>
-      </nav>
-      <div class="social">
-        <img src="./images/socialmedia.png" width="30" alt="Social" />
-        <div class="dropdown">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">X (Twitter)</a>
+
+      <div class="leftnav">
+        <!-- Hamburger (only on mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+          <a href="about.html">About Us</a>
+          <a href="index.html">Home</a>
+          <a href="stationary.html">Stationery</a>
+          <a href="food.html">Food</a>
+          <a href="gifting.html" aria-current="page">Gifting</a>
+        </nav>
+
+        <!-- Social Media Dropdown -->
+        <div class="social">
+          <img src="./images/socialmedia.png" width="30" alt="Social" />
+          <div class="dropdown">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X (Twitter)</a>
+          </div>
         </div>
       </div>
     </header>
@@ -36,17 +45,17 @@
       <img
         src="./images/food-images/temp_images/Summer_Sale_Banner_desktop_1500x550_crop_center.webp"
         class="banner-img active"
-        alt="Healthy Snacks Banner"
+        alt="Gift Box Banner"
       />
       <img
         src="./images/food-images/temp_images/Cut_Mix_Cook_desktop_1_2800x1000_crop_center.webp"
         class="banner-img"
-        alt="No Preservatives Food Banner"
+        alt="Celebration Banner"
       />
       <img
         src="./images/food-images/temp_images/India_s_only_preservative-02_1_1_5716x2041_crop_center.jpg"
         class="banner-img"
-        alt="Nutritional Meals Banner"
+        alt="Festive Gifting Banner"
       />
       <div class="banner-progress">
         <div class="circle"><div class="fill"></div></div>
@@ -57,186 +66,62 @@
 
     <!-- Popular Products -->
     <section class="popular-products">
-      <h2 class="section-title">Most Popular Products</h2>
+      <h2 class="section-title">Popular Stationary Products</h2>
       <div class="product-grid">
-        <!-- Product cards (same structure) -->
-        <!-- Granola Bites -->
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="./images/food-images/products/granola-bites.jpg"
-              alt="Granola Bites"
-            />
-            <div class="big-details">
-              <div class="price-tag">₹299 Only</div>
-              <ul class="features-list">
-                <li><span class="checkmark">✓</span> 100% Natural</li>
-                <li><span class="checkmark">✓</span> No Added Sugar</li>
-                <li><span class="checkmark">✓</span> High Protein</li>
-                <li><span class="checkmark">✓</span> Gluten Free</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-title">
-            <div class="product-name">Granola Bites</div>
-            <button
-              class="buy-button"
-              onclick="window.open('https://www.amazon.com/s?k=Granola Bites')"
-            >
-              Buy on Amazon
-            </button>
-          </div>
-        </div>
-
-        <!-- Fruit Bars -->
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="./images/food-images/products/fruit-bars.webp"
-              alt="Fruit Bars"
-            />
-            <div class="big-details">
-              <div class="price-tag">₹199 Only</div>
-              <ul class="features-list">
-                <li><span class="checkmark">✓</span> Real Fruit</li>
-                <li><span class="checkmark">✓</span> Rich in Fiber</li>
-                <li><span class="checkmark">✓</span> Vegan Friendly</li>
-                <li><span class="checkmark">✓</span> Pocket Snacks</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-title">
-            <div class="product-name">Fruit Bars</div>
-            <button
-              class="buy-button"
-              onclick="window.open('https://www.amazon.com/s?k=Fruit Bars')"
-            >
-              Buy on Amazon
-            </button>
-          </div>
-        </div>
-
-        <!-- Healthy Cookies -->
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="./images/food-images/products/healthy-cookie.avif"
-              alt="Healthy Cookies"
-            />
-            <div class="big-details">
-              <div class="price-tag">₹149 Only</div>
-              <ul class="features-list">
-                <li><span class="checkmark">✓</span> Low Calorie</li>
-                <li><span class="checkmark">✓</span> No Maida</li>
-                <li><span class="checkmark">✓</span> Tasty & Nutritious</li>
-                <li><span class="checkmark">✓</span> Baked, Not Fried</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-title">
-            <div class="product-name">Healthy Cookies</div>
-            <button
-              class="buy-button"
-              onclick="window.open('https://www.amazon.com/s?k=Healthy Cookies')"
-            >
-              Buy on Amazon
-            </button>
-          </div>
-        </div>
-
-        <!-- Protein Bar -->
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="./images/food-images/products/proteinbar.webp"
-              alt="Protein Bar"
-            />
-            <div class="big-details">
-              <div class="price-tag">₹249 Only</div>
-              <ul class="features-list">
-                <li><span class="checkmark">✓</span> 20g Protein</li>
-                <li><span class="checkmark">✓</span> No Preservatives</li>
-                <li><span class="checkmark">✓</span> Energy Booster</li>
-                <li><span class="checkmark">✓</span> Chocolate Flavor</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-title">
-            <div class="product-name">Protein Bar</div>
-            <button
-              class="buy-button"
-              onclick="window.open('https://www.amazon.com/s?k=Protein Bar')"
-            >
-              Buy on Amazon
-            </button>
-          </div>
-        </div>
         <div class="explore-all-container">
-          <a href="allfood.html" class="explore-all-button">
-            Explore All Food Products →
-          </a>
+          <a href="allstationary.html" class="explore-all-button"
+            >Explore All Stationery Products →</a
+          >
         </div>
       </div>
     </section>
 
-    <!-- Our Mind Blowing Ranges -->
+    <!-- Occasion Ranges -->
     <section class="mind-blowing-ranges">
-      <h2>Our Mind Blowing Ranges</h2>
+      <h2>Perfect For Every Desk</h2>
       <div class="ranges-cards">
         <div class="range-card">
           <img
-            src="./images/food-images/ranges/superfoods.png"
-            alt="Superfoods"
+            src="./images/stationary-images/ranges/studentessentials.png"
+            alt="studentessentials"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/food-images/ranges/nutritionbar.png"
-            alt="Nutrition Bars"
+            src="./images/stationary-images/ranges/artstationary.png"
+            alt="artstationary"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/food-images/ranges/ready_to_eat.png"
-            alt="Ready to Eat"
+            src="./images/stationary-images/ranges/luxiry pens.png"
+            alt="luxiry pens"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/food-images/ranges/healthybreakfast.png"
-            alt="Healthy Breakfast"
+            src="./images/stationary-images/ranges/premiumjournals.png"
+            alt="premiumjournal"
           />
         </div>
       </div>
     </section>
 
-    <!-- What Makes Our Food Unique -->
+    <!-- Why Choose Us -->
     <section class="likhpad-unique">
-      <h2>What Makes Our Food Unique</h2>
+      <h2>Why Our Stationery?</h2>
       <div class="fixed-centered-image">
         <img
-          src="./images/food-images/cropped-what_makesfoodunique.png"
-          alt="Food USP Features"
+          src="./images/stationary-images/cropped-whatmakeslikhpadunique.png"
+          alt="Stationery Highlights"
         />
       </div>
     </section>
 
-    <!-- See the Updates -->
+    <!-- Updates -->
     <section class="updates">
-      <h2>See the Updates</h2>
-      <div class="update-feed">
-        <div class="post">
-          <p>🔥 New arrival: Millet Cookies now in stock!</p>
-          <img
-            src="./images/food-images/milletcookiesnew.png"
-            alt="Millet Cookies"
-          />
-        </div>
-        <div class="post">
-          <p>🎉 Featured on Times Food for healthiest snacks 2025!</p>
-          <img src="./images/food-images/featued.png" alt="Media Feature" />
-        </div>
-      </div>
+      <h2>Latest Updates</h2>
+      <div class="update-feed"></div>
     </section>
 
     <!-- Available At -->
@@ -266,27 +151,14 @@
     <!-- Reviews -->
     <section class="reviews">
       <h2>Reviews and Ratings</h2>
-      <div class="reviews-container">
-        <div class="review-card">
-          <div class="platform-name">Amazon</div>
-          <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
-          <p class="review-text">“Love the granola, perfect for breakfast!”</p>
-        </div>
-        <div class="review-card">
-          <div class="platform-name">Blinkit</div>
-          <p class="stars">⭐️⭐️⭐️⭐️</p>
-          <p class="review-text">
-            “Fresh and healthy snacks delivered quickly.”
-          </p>
-        </div>
-      </div>
+      <div class="reviews-container"></div>
     </section>
 
     <!-- Footer -->
     <footer>
       <p>
-        Under ConnectoFi you can choose how you eat, how you write and what
-        makes you healthy.
+        Under ConnectoFi you can choose how you eat, how you write, and what
+        makes your moments special.
       </p>
       <div class="links">
         <a href="#">About Us</a> | <a href="#">Contact Us</a> |
@@ -295,6 +167,6 @@
       </div>
     </footer>
 
-    <script src="food.js"></script>
+    <script type="module" src="food.js"></script>
   </body>
 </html>

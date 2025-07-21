@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -90,8 +90,15 @@ nav a:hover {
   display: none;
   cursor: pointer;
   user-select: none;
+  margin-right: 50px;
 }
-
+.leftnav {
+  width: auto;
+  /* padding-left: 30px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /* Responsive styles */
 @media (max-width: 1024px) {
   nav.nav-links {
@@ -167,6 +174,7 @@ nav.nav-links.show {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 4px rgba(183, 28, 28, 0.5);
+  cursor: pointer;
 }
 
 .fill {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stationery | ConnectoFi</title>
-    <link rel="stylesheet" href="stationary.css" />
+    <link rel="stylesheet" href="./stationary.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -14,20 +14,28 @@
     <!-- Header -->
     <header>
       <div class="logo">ConnectoFi</div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <nav class="nav-links">
-        <a href="about.html">About Us</a>
-        <a href="index.html">Home</a>
-        <a href="stationary.html" aria-current="page">Stationery</a>
-        <a href="food.html">Food</a>
-        <a href="gifting.html">Gifting</a>
-      </nav>
-      <div class="social">
-        <img src="./images/socialmedia.png" width="30" alt="Social" />
-        <div class="dropdown">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">X (Twitter)</a>
+
+      <div class="leftnav">
+        <!-- Hamburger (only on mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+          <a href="about.html">About Us</a>
+          <a href="index.html">Home</a>
+          <a href="stationary.html">Stationery</a>
+          <a href="food.html">Food</a>
+          <a href="gifting.html" aria-current="page">Gifting</a>
+        </nav>
+
+        <!-- Social Media Dropdown -->
+        <div class="social">
+          <img src="./images/socialmedia.png" width="30" alt="Social" />
+          <div class="dropdown">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X (Twitter)</a>
+          </div>
         </div>
       </div>
     </header>
@@ -35,19 +43,19 @@
     <!-- Banner -->
     <section class="banner-slider">
       <img
-        src="./images/stationary-images/banner1.jpg"
+        src="./images/stationary-images/newbanners/banner1.webp"
         class="banner-img active"
-        alt="Stationery Banner 1"
+        alt="Gift Box Banner"
       />
       <img
-        src="./images/stationary-images/banner2.jpg"
+        src="./images/stationary-images/newbanners/banner2.webp"
         class="banner-img"
-        alt="Stationery Banner 2"
+        alt="Celebration Banner"
       />
       <img
-        src="./images/stationary-images/banner3.jpg"
+        src="./images/stationary-images/newbanners/banneer3.png"
         class="banner-img"
-        alt="Stationery Banner 3"
+        alt="Festive Gifting Banner"
       />
       <div class="banner-progress">
         <div class="circle"><div class="fill"></div></div>
@@ -58,38 +66,8 @@
 
     <!-- Popular Products -->
     <section class="popular-products">
-      <h2 class="section-title">Top Stationery Picks</h2>
+      <h2 class="section-title">Popular Stationary Products</h2>
       <div class="product-grid">
-        <!-- Sample Product -->
-        <div class="card">
-          <div class="card-image">
-            <img
-              src="./images/stationary-images/products/pen.jpg"
-              alt="Premium Pen"
-            />
-            <div class="big-details">
-              <div class="price-tag">₹99 Only</div>
-              <ul class="features-list">
-                <li><span class="checkmark">✓</span> Smooth Ink</li>
-                <li><span class="checkmark">✓</span> Elegant Design</li>
-                <li><span class="checkmark">✓</span> Long Lasting</li>
-                <li><span class="checkmark">✓</span> Premium Grip</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-title">
-            <div class="product-name">Signature Gel Pen</div>
-            <button
-              class="buy-button"
-              onclick="window.open('https://www.amazon.com/s?k=gel pen')"
-            >
-              Buy on Amazon
-            </button>
-          </div>
-        </div>
-
-        <!-- Add more stationery products here -->
-
         <div class="explore-all-container">
           <a href="allstationary.html" class="explore-all-button"
             >Explore All Stationery Products →</a
@@ -104,26 +82,26 @@
       <div class="ranges-cards">
         <div class="range-card">
           <img
-            src="./images/stationary-images/ranges/school.png"
-            alt="School Supplies"
+            src="./images/stationary-images/ranges/studentessentials.png"
+            alt="studentessentials"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/stationary-images/ranges/office.png"
-            alt="Office Essentials"
+            src="./images/stationary-images/ranges/artstationary.png"
+            alt="artstationary"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/stationary-images/ranges/art.png"
-            alt="Art Stationery"
+            src="./images/stationary-images/ranges/luxiry pens.png"
+            alt="luxiry pens"
           />
         </div>
         <div class="range-card">
           <img
-            src="./images/stationary-images/ranges/gifting.png"
-            alt="Gift Packs"
+            src="./images/stationary-images/ranges/premiumjournals.png"
+            alt="premiumjournal"
           />
         </div>
       </div>
@@ -134,7 +112,7 @@
       <h2>Why Our Stationery?</h2>
       <div class="fixed-centered-image">
         <img
-          src="./images/stationary-images/highlights.png"
+          src="./images/stationary-images/cropped-whatmakeslikhpadunique.png"
           alt="Stationery Highlights"
         />
       </div>
@@ -143,22 +121,7 @@
     <!-- Updates -->
     <section class="updates">
       <h2>Latest Updates</h2>
-      <div class="update-feed">
-        <div class="post">
-          <p>🖋 New Art Range Launched!</p>
-          <img
-            src="./images/stationary-images/newart.png"
-            alt="New Art Range"
-          />
-        </div>
-        <div class="post">
-          <p>📚 Back to School Kits Now Available!</p>
-          <img
-            src="./images/stationary-images/backtoschool.png"
-            alt="School Kits"
-          />
-        </div>
-      </div>
+      <div class="update-feed"></div>
     </section>
 
     <!-- Available At -->
@@ -188,18 +151,7 @@
     <!-- Reviews -->
     <section class="reviews">
       <h2>Reviews and Ratings</h2>
-      <div class="reviews-container">
-        <div class="review-card">
-          <div class="platform-name">Amazon</div>
-          <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
-          <p class="review-text">“Quality pens, worth every rupee.”</p>
-        </div>
-        <div class="review-card">
-          <div class="platform-name">Flipkart</div>
-          <p class="stars">⭐️⭐️⭐️⭐️</p>
-          <p class="review-text">“Loved the packaging and variety.”</p>
-        </div>
-      </div>
+      <div class="reviews-container"></div>
     </section>
 
     <!-- Footer -->
@@ -215,6 +167,6 @@
       </div>
     </footer>
 
-    <script src="stationary.js"></script>
+    <script type="module" src="stationary.js"></script>
   </body>
 </html>

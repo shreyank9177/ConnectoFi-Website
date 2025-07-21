@@ -1,131 +1,137 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // === Banner Slider ===
-  const slides = document.querySelectorAll(".banner-slider picture");
+import { reviews, updates, topGiftingPicks } from "./stationaryData.js";
+const slides = document.querySelectorAll(".banner-img");
+const fills = document.querySelectorAll(".fill");
+const circles = document.querySelectorAll(".circle");
+const interval = 5000;
+let current = 0;
+let timer;
 
-  const fills = document.querySelectorAll(".fill");
-  const circles = document.querySelectorAll(".circle");
-  const interval = 5000;
-  let current = 0;
-  let timer;
+function resetProgress() {
+  fills.forEach((fill) => {
+    fill.style.transition = "none";
+    fill.style.width = "0%";
+    void fill.offsetWidth;
+    fill.style.transition = "width 5s linear";
+  });
+}
 
-  function resetProgress() {
-    fills.forEach((fill) => {
-      fill.style.transition = "none";
-      fill.style.width = "0%";
-      void fill.offsetWidth; // Force reflow
-      fill.style.transition = "width 5s linear";
-    });
-  }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    fills[i].style.width = "0%";
+  });
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      fills[i].style.width = "0%";
-    });
+  slides[index].classList.add("active");
+  fills[index].style.width = "100%";
+}
 
-    slides[index].classList.add("active");
-    fills[index].style.width = "100%";
-  }
+function startSlider() {
+  resetProgress();
+  showSlide(current);
 
-  function startSlider() {
+  timer = setInterval(() => {
+    current = (current + 1) % slides.length;
     resetProgress();
     showSlide(current);
-    timer = setInterval(() => {
-      current = (current + 1) % slides.length;
-      resetProgress();
-      showSlide(current);
-    }, interval);
-  }
+  }, interval);
+}
 
-  circles.forEach((circle, index) => {
-    circle.addEventListener("click", () => {
-      clearInterval(timer);
-      current = index;
-      resetProgress();
-      showSlide(current);
-      startSlider();
-    });
+circles.forEach((circle, index) => {
+  circle.addEventListener("click", () => {
+    clearInterval(timer);
+    current = index;
+    resetProgress();
+    showSlide(current);
+    startSlider();
   });
-
-  startSlider();
-
-  // === Scroll Reveal ===
-  // const revealItems = document.querySelectorAll(
-  //   ".card, .range-card, .post, .review-card"
-  // );
-
-  // const revealOnScroll = () => {
-  //   const triggerBottom = window.innerHeight * 0.9;
-  //   revealItems.forEach((el) => {
-  //     const boxTop = el.getBoundingClientRect().top;
-  //     if (boxTop < triggerBottom) {
-  //       el.style.opacity = "1";
-  //       el.style.transform = "translateY(0)";
-  //       el.style.transition = "all 0.6s ease-out";
-  //     }
-  //   });
-  // };
-
-  // Initial state
-  // revealItems.forEach((el) => {
-  //   el.style.opacity = "0";
-  //   el.style.transform = "translateY(50px)";
-  // });
-
-  // window.addEventListener("scroll", revealOnScroll);
-  // revealOnScroll();
-
-  // === Back to Top Button ===
-  const backBtn = document.createElement("button");
-  backBtn.textContent = "↑";
-  Object.assign(backBtn.style, {
-    position: "fixed",
-    bottom: "30px",
-    right: "30px",
-    background: "#2575fc",
-    color: "#fff",
-    border: "none",
-    borderRadius: "50%",
-    width: "45px",
-    height: "45px",
-    fontSize: "22px",
-    cursor: "pointer",
-    boxShadow: "0 8px 18px rgba(0,0,0,0.2)",
-    display: "none",
-    zIndex: "999",
-    transition: "opacity 0.3s",
-  });
-  document.body.appendChild(backBtn);
-
-  window.addEventListener("scroll", () => {
-    backBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-
-  backBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // === Product Card Click Expand (for mobile or small screens) ===
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      if (window.innerWidth < 768) {
-        card.classList.toggle("expanded");
-      }
-    });
-  });
-
-  // === Animated Page Load ===
-  // document.body.style.opacity = "0";
-  // document.body.style.transition = "opacity 0.6s ease-in";
-  // setTimeout(() => {
-  //   document.body.style.opacity = "1";
-  // }, 50);
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-const dropdownNav = document.getElementById("dropdown-nav");
+startSlider();
 
-menuToggle.addEventListener("click", () => {
-  dropdownNav.classList.toggle("show");
+function toggleMenu() {
+  const nav = document.querySelector(".nav-links");
+  nav.classList.toggle("show");
+}
+window.toggleMenu = toggleMenu;
+const grid = document.querySelector(".product-grid");
+
+topGiftingPicks.forEach((product) => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <div class="card-image">
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="big-details">
+        <div class="price-tag">${product.price}</div>
+        <ul class="features-list">
+          ${product.features
+            .map(
+              (feature) =>
+                `<li><span class="checkmark">✓</span> ${feature}</li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+    </div>
+    <div class="card-title">
+      <div class="product-name">${product.name}</div>
+      <button class="buy-button" onclick="window.open('${
+        product.link
+      }')">Buy on Amazon</button>
+    </div>
+  `;
+
+  grid.prepend(card);
+});
+
+const container = document.querySelector(".reviews-container");
+
+reviews.forEach((review) => {
+  const card = document.createElement("div");
+  card.className = "review-card";
+
+  // Convert stars number to emoji stars
+  const starText = "⭐️".repeat(review.stars);
+
+  card.innerHTML = `
+      <div class="platform-name">${review.platform}</div>
+      <p class="stars">${starText}</p>
+      <p class="review-text">“${review.text}”</p>
+    `;
+
+  container.appendChild(card);
+});
+
+const updateFeed = document.querySelector(".update-feed");
+
+updates.forEach((update) => {
+  const post = document.createElement("div");
+  post.className = "post";
+
+  post.innerHTML = `
+    <p>${update.message}</p>
+    <img src="${update.image}" alt="${update.alt}" />
+  `;
+
+  updateFeed.appendChild(post);
+});
+
+document.addEventListener("click", function (event) {
+  const nav = document.querySelector(".nav-links");
+  const hamburger = document.querySelector(".hamburger");
+
+  if (!nav || !hamburger) return;
+
+  const isClickInsideMenu = nav.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  if (
+    window.innerWidth <= 1024 &&
+    nav.classList.contains("show") &&
+    !isClickInsideMenu &&
+    !isClickOnHamburger
+  ) {
+    nav.classList.remove("show");
+  }
 });
