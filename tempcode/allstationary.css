@@ -15,34 +15,123 @@ body {
 
 /* Header */
 header {
+  background: linear-gradient(90deg, #4d5bc5, #1e88e5);
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
 nav a {
   color: white;
-  margin: 0 1rem;
   text-decoration: none;
+  margin: 0 1rem;
   font-weight: 500;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s;
 }
 
 nav a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
+}
+
+.social {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  animation: fadeSlideDown 0.3s ease forwards;
+  min-width: 160px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.5rem;
+  color: #6a1b4d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown a:hover {
+  background: #e3f2fd;
+
+  border-radius: 6px;
+}
+
+.social:hover .dropdown,
+.dropdown:hover {
+  display: block;
+}
+
+/* Hamburger icon */
+.hamburger {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 50px;
+}
+.leftnav {
+  width: auto;
+  /* padding-left: 30px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  nav.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  nav.nav-links a {
+    color: #6a1b4d;
+    font-weight: 600;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Show menu when active */
+nav.nav-links.show {
+  display: flex;
 }
 
 /* Title Section */

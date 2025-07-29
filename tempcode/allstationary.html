@@ -14,13 +14,30 @@
     <!-- Header -->
     <header>
       <div class="logo">ConnectoFi</div>
-      <nav>
-        <a href="about.html">About Us</a>
-        <a href="index.html">Home</a>
-        <a href="stationary.html">Stationery</a>
-        <a href="food.html">Food</a>
-        <a href="gifting.html">Gifting</a>
-      </nav>
+
+      <div class="leftnav">
+        <!-- Hamburger (only on mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+          <a href="about.html">About Us</a>
+          <a href="index.html">Home</a>
+          <a href="stationary.html">Stationery</a>
+          <a href="food.html">Food</a>
+          <a href="gifting.html" aria-current="page">Gifting</a>
+        </nav>
+
+        <!-- Social Media Dropdown -->
+        <div class="social">
+          <img src="./images/socialmedia.png" width="30" alt="Social" />
+          <div class="dropdown">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X (Twitter)</a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Page Title -->
